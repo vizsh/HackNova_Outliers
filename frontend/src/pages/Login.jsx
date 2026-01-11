@@ -2,6 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import PlasmaBackground from '../components/PlasmaBackground';
+import { API_URL } from '../config';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -15,7 +16,7 @@ const Login = () => {
 
         try {
             console.log('Attempting login...');
-            const res = await axios.post('http://localhost:3000/api/auth/login', { email, password });
+            const res = await axios.post(`${API_URL}/api/auth/login`, { email, password });
 
             if (!res.data || !res.data.token) {
                 setError('Invalid response from server');

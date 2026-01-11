@@ -6,8 +6,9 @@
  */
 
 import axios from 'axios';
+import { API_URL } from '../config';
 
-const API_BASE_URL = 'http://localhost:3000/api/intelligence';
+const API_BASE_URL = `${API_URL}/api/intelligence`;
 
 /**
  * Get authorization token from localStorage
@@ -62,7 +63,7 @@ export const getDriverSkillProfile = async (driverId, userId = null) => {
         if (!body.driverId && !body.userId) {
             throw new Error('driverId or userId must be provided');
         }
-        
+
         const response = await axios.post(
             `${API_BASE_URL}/driver-skill-profile`,
             body,
@@ -92,7 +93,7 @@ export const analyzeRouteRisk = async (delivery = null, shipmentId = null) => {
         } else {
             throw new Error('Either delivery or shipmentId must be provided');
         }
-        
+
         const response = await axios.post(
             `${API_BASE_URL}/route-risk-analysis`,
             body,
@@ -155,7 +156,7 @@ export const predictDelay = async (routeAnalysis = null, driverProfile = null, d
         if (Object.keys(deliveryContext).length > 0) {
             body.deliveryContext = deliveryContext;
         }
-        
+
         const response = await axios.post(
             `${API_BASE_URL}/delay-prediction`,
             body,
