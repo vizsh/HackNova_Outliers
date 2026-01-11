@@ -4,13 +4,12 @@ import { useLocation } from 'react-router-dom';
 import DashboardLayout from '../components/layout/DashboardLayout';
 import { Card, StatusBadge } from '../components/common/UI';
 import { MapPin, Navigation, Package, Check, Camera, ShieldCheck, Clock, Zap, CheckCircle } from 'lucide-react';
-import io from 'socket.io-client';
+import socket from '../utils/socket';
 import MapComponent from '../components/MapComponent';
 // NEW: Chatbot component
 import Chatbot from '../components/chatbot/Chatbot';
 
-// Connect to socket
-const socket = io('http://localhost:3000');
+// Singleton socket is already connected in utils/socket.js
 
 // Fallback Data to ensure User always sees something
 
@@ -137,17 +136,17 @@ const DriverDashboard = () => {
                 (pos) => {
                     const { latitude, longitude } = pos.coords;
                     const driverId = localStorage.getItem('userId');
-                    
+
                     // Update local state
                     setLocationStats({ lat: latitude, lng: longitude });
-                    
+
                     // Send location to server via socket
                     socket.emit('location:update', {
                         driverId: driverId,
                         lat: latitude,
                         lng: longitude
                     });
-                    
+
                     alert("Location Shared with Operator");
                     setShowLocationPermissionModal(false);
                 },
@@ -175,23 +174,23 @@ const DriverDashboard = () => {
         input.type = 'file';
         input.accept = 'image/*';
         input.capture = 'environment'; // Use back camera on mobile
-        
+
         input.onchange = async (e) => {
             const file = e.target.files[0];
             if (!file) return;
-            
+
             // Get GPS location
             if (!navigator.geolocation) {
                 setPhotoError('GPS is required for proof of delivery photo. Please enable location services.');
                 return;
             }
-            
+
             navigator.geolocation.getCurrentPosition(
                 async (position) => {
                     const lat = position.coords.latitude;
                     const lng = position.coords.longitude;
                     const timestamp = new Date().toISOString();
-                    
+
                     // Convert file to base64 URL for preview
                     const reader = new FileReader();
                     reader.onload = (event) => {
@@ -210,26 +209,26 @@ const DriverDashboard = () => {
                 { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
             );
         };
-        
+
         input.click();
     };
 
     const handleCompleteDelivery = async () => {
         const token = localStorage.getItem('token');
         if (!selectedJob) return;
-        
+
         // Validate OTP
         if (!otpCode || otpCode.length !== 6) {
             alert('Please enter a valid 6-digit OTP code.');
             return;
         }
-        
+
         // Validate photo with GPS
         if (!podPhoto || !photoLatitude || !photoLongitude) {
             setPhotoError('Photo with GPS location is required. Please capture a photo.');
             return;
         }
-        
+
         try {
             // Upload photo to server (in production, upload to cloud storage first)
             // For now, we'll send the base64 data URL
@@ -239,7 +238,7 @@ const DriverDashboard = () => {
                 longitude: photoLongitude,
                 timestamp: photoTimestamp || new Date().toISOString()
             };
-            
+
             await axios.post(`http://localhost:3000/api/data/shipments/${selectedJob.id}/complete`, {
                 otp: otpCode,
                 photo_url: photoData.url,
@@ -249,7 +248,7 @@ const DriverDashboard = () => {
             }, {
                 headers: { Authorization: `Bearer ${token}` }
             });
-            
+
             alert('Delivery Verified & Completed!');
             setShowOtpModal(false);
             setOtpCode('');
@@ -262,7 +261,7 @@ const DriverDashboard = () => {
         } catch (err) {
             const errorMsg = err.response?.data?.error || 'Verification failed';
             const step = err.response?.data?.step || '';
-            
+
             if (step === 'otp_verification') {
                 alert(`OTP Verification Failed: ${errorMsg}`);
                 if (err.response?.data?.locked) {
@@ -607,7 +606,7 @@ const DriverDashboard = () => {
                                                                 <CheckCircle size={16} /> No critical disruptions found.
                                                             </div>
                                                         )}
-                                                        
+
                                                         {/* Relevant News Articles */}
                                                         {routeAnalysis.news_articles && routeAnalysis.news_articles.length > 0 && (
                                                             <div className="mt-4 pt-4 border-t border-gray-200">
@@ -706,7 +705,7 @@ const DriverDashboard = () => {
                                         />
                                     </div>
                                 </div>
-                                
+
                                 <div>
                                     <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Experience</label>
                                     <input
@@ -915,7 +914,7 @@ const DriverDashboard = () => {
                                         </button>
                                     </div>
                                 ) : (
-                                    <div 
+                                    <div
                                         onClick={handleCapturePhoto}
                                         className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:bg-gray-50 transition cursor-pointer group"
                                     >
