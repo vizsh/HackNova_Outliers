@@ -1,0 +1,978 @@
+Entering auth.js
+[Chatbot] Dataset loaded successfully
+HackNova Backend Initialized.
+Server running on http://localhost:3000
+User connected: JgX6FdwTfHbvMSfRAAAC
+User connected: f7kgF1gBCwNiqU2WAAAD
+[REQUEST] GET /health
+[REQUEST] POST /api/auth/login
+[DB] Query: SELECT * FROM users WHERE email = $1 [ 'operator@example.com' ]
+[DB] Found user for email: operator@example.com YES (id: 1, role: operator)
+[LOGIN DEBUG] Attempt for: operator@example.com
+[LOGIN DEBUG] Stored Hash: $2b$10$jUjpPEPoWvnpDDizQ6b3mO5c6L.E6oN96okoScTs4nFZLS.RHVZJi
+[LOGIN DEBUG] Password Match: true
+User disconnected: JgX6FdwTfHbvMSfRAAAC
+User disconnected: f7kgF1gBCwNiqU2WAAAD
+User connected: j4eor7p1bgIWNoyPAAAG
+User connected: AazA7Gl6MEdQ2NFbAAAH
+[REQUEST] POST /api/auth/login
+[DB] Query: SELECT * FROM users WHERE email = $1 [ 'operator@example.com' ]
+[DB] Found user for email: operator@example.com YES (id: 1, role: operator)
+[LOGIN DEBUG] Attempt for: operator@example.com
+[LOGIN DEBUG] Stored Hash: $2b$10$jUjpPEPoWvnpDDizQ6b3mO5c6L.E6oN96okoScTs4nFZLS.RHVZJi
+[LOGIN DEBUG] Password Match: true
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+User disconnected: j4eor7p1bgIWNoyPAAAG
+User disconnected: AazA7Gl6MEdQ2NFbAAAH
+User connected: 7x19Hls4rXHEipq4AAAK
+User connected: nJ847q5Vwj5bT4BRAAAL
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/delay-prediction
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver', 'customer' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/route-risk-analysis
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-route-fit
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] POST /api/intelligence/feedback-attribution
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/feedback-attribution
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[REQUEST] POST /api/intelligence/driver-skill-profile
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator', 'driver' ] Actual: operator
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] POST /api/chatbot/message
+[Auth] User verified: operator@example.com Role: operator
+[DB] Query: SELECT * FROM users WHERE id = $1 [ 1 ]
+[Chatbot] Error generating response: Error: Gemini API error: 404 - models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at IncomingMessage.<anonymous> (/Users/swayampanchal/Downloads/HackNova2120/HackNova 2 1522/HackNova 2/backend/services/geminiChatbot.js:139:36)
+    at IncomingMessage.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[REQUEST] POST /api/chatbot/message
+[Auth] User verified: operator@example.com Role: operator
+[DB] Query: SELECT * FROM users WHERE id = $1 [ 1 ]
+[Chatbot] Error generating response: Error: Gemini API error: 404 - models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at IncomingMessage.<anonymous> (/Users/swayampanchal/Downloads/HackNova2120/HackNova 2 1522/HackNova 2/backend/services/geminiChatbot.js:139:36)
+    at IncomingMessage.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[REQUEST] POST /api/chatbot/message
+[Auth] User verified: operator@example.com Role: operator
+[DB] Query: SELECT * FROM users WHERE id = $1 [ 1 ]
+[Chatbot] Error generating response: Error: Gemini API error: 404 - models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at IncomingMessage.<anonymous> (/Users/swayampanchal/Downloads/HackNova2120/HackNova 2 1522/HackNova 2/backend/services/geminiChatbot.js:139:36)
+    at IncomingMessage.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[REQUEST] GET /api/data/shipments
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments ORDER BY created_at DESC undefined
+[REQUEST] GET /api/data/drivers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email, role FROM users WHERE role = 'driver' undefined
+[REQUEST] GET /api/data/vehicles
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM vehicles undefined
+[REQUEST] GET /api/data/customers
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT id, email FROM users WHERE role = 'customer' undefined
+[REQUEST] GET /api/documents/invoice/8
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments WHERE id = $1 [ '8' ]
+[REQUEST] GET /api/documents/invoice/2
+[Auth] User verified: operator@example.com Role: operator
+[Auth] Checking role for user: operator@example.com Required: [ 'operator' ] Actual: operator
+[DB] Query: SELECT * FROM shipments WHERE id = $1 [ '2' ]
+[REQUEST] POST /api/auth/login
+[DB] Query: SELECT * FROM users WHERE email = $1 [ 'driver@example.com' ]
+[DB] Found user for email: driver@example.com YES (id: 2, role: driver)
+[LOGIN DEBUG] Attempt for: driver@example.com
+[LOGIN DEBUG] Stored Hash: $2b$10$VbcS5ao/sLWezpWh0bEaT.Ym56a5y6cS4DBlULGEeU4Nrfmi31DjS
+[LOGIN DEBUG] Password Match: true
+[REQUEST] GET /api/data/assigned-shipments
+[Auth] User verified: driver@example.com Role: driver
+[Auth] Checking role for user: driver@example.com Required: [ 'driver' ] Actual: driver
+[DB] Query: SELECT * FROM shipments WHERE driver_id = $1 [ 2 ]
+[REQUEST] GET /api/data/assigned-shipments
+[Auth] User verified: driver@example.com Role: driver
+[Auth] Checking role for user: driver@example.com Required: [ 'driver' ] Actual: driver
+[DB] Query: SELECT * FROM shipments WHERE driver_id = $1 [ 2 ]
+[REQUEST] GET /api/data/drivers/2/stats
+[Auth] User verified: driver@example.com Role: driver
+[DB] Query: SELECT * FROM driver_ratings WHERE driver_id = $1 [ '2' ]
+[DB] Query: SELECT * FROM feedback WHERE driver_id = $1 [ '2' ]
+[DB] Query: SELECT * FROM driver_kpis WHERE driver_id = $1 [ '2' ]
+[DB] Query: SELECT * FROM users WHERE id = $1 [ '2' ]
+[REQUEST] GET /api/data/drivers/2/stats
+[Auth] User verified: driver@example.com Role: driver
+[DB] Query: SELECT * FROM driver_ratings WHERE driver_id = $1 [ '2' ]
+[DB] Query: SELECT * FROM feedback WHERE driver_id = $1 [ '2' ]
+[DB] Query: SELECT * FROM driver_kpis WHERE driver_id = $1 [ '2' ]
+[DB] Query: SELECT * FROM users WHERE id = $1 [ '2' ]
+[REQUEST] POST /api/auth/login
+[DB] Query: SELECT * FROM users WHERE email = $1 [ 'driver2@example.com' ]
+[DB] Found user for email: driver2@example.com YES (id: 4, role: driver)
+[LOGIN DEBUG] Attempt for: driver2@example.com
+[LOGIN DEBUG] Stored Hash: $2b$10$0bW3uBofF2etBniHkBvYQOidz6FcqvV6IMWI5sLB2kVLJZKLNIkZC
+[LOGIN DEBUG] Password Match: true
+[REQUEST] GET /api/data/assigned-shipments
+[Auth] User verified: driver2@example.com Role: driver
+[Auth] Checking role for user: driver2@example.com Required: [ 'driver' ] Actual: driver
+[DB] Query: SELECT * FROM shipments WHERE driver_id = $1 [ 4 ]
+[REQUEST] GET /api/data/assigned-shipments
+[Auth] User verified: driver2@example.com Role: driver
+[Auth] Checking role for user: driver2@example.com Required: [ 'driver' ] Actual: driver
+[DB] Query: SELECT * FROM shipments WHERE driver_id = $1 [ 4 ]
+[REQUEST] GET /api/data/drivers/4/stats
+[Auth] User verified: driver2@example.com Role: driver
+[DB] Query: SELECT * FROM driver_ratings WHERE driver_id = $1 [ '4' ]
+[DB] Query: SELECT * FROM feedback WHERE driver_id = $1 [ '4' ]
+[DB] Query: SELECT * FROM driver_kpis WHERE driver_id = $1 [ '4' ]
+[DB] Query: SELECT * FROM users WHERE id = $1 [ '4' ]
+[REQUEST] GET /api/data/drivers/4/stats
+[Auth] User verified: driver2@example.com Role: driver
+[DB] Query: SELECT * FROM driver_ratings WHERE driver_id = $1 [ '4' ]
+[DB] Query: SELECT * FROM feedback WHERE driver_id = $1 [ '4' ]
+[DB] Query: SELECT * FROM driver_kpis WHERE driver_id = $1 [ '4' ]
+[DB] Query: SELECT * FROM users WHERE id = $1 [ '4' ]
+[REQUEST] POST /api/auth/login
+[DB] Query: SELECT * FROM users WHERE email = $1 [ 'customer@example.com' ]
+[DB] Found user for email: customer@example.com YES (id: 3, role: customer)
+[LOGIN DEBUG] Attempt for: customer@example.com
+[LOGIN DEBUG] Stored Hash: $2b$10$iYhB2mT4UjzSBhHRl7DRu.yKQdkeGVFR0t4R229hzL8DYCWqzduvS
+[LOGIN DEBUG] Password Match: true
+[REQUEST] GET /api/data/my-shipments
+[Auth] User verified: customer@example.com Role: customer
+[Auth] Checking role for user: customer@example.com Required: [ 'customer' ] Actual: customer
+[DB] Query: SELECT * FROM shipments WHERE customer_id = $1 [ 3 ]
+[REQUEST] GET /api/customer/notifications
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM notifications WHERE user_id = $1 [ 3 ]
+[REQUEST] GET /api/data/my-shipments
+[Auth] User verified: customer@example.com Role: customer
+[Auth] Checking role for user: customer@example.com Required: [ 'customer' ] Actual: customer
+[DB] Query: SELECT * FROM shipments WHERE customer_id = $1 [ 3 ]
+[REQUEST] GET /api/customer/notifications
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM notifications WHERE user_id = $1 [ 3 ]
+[Socket] Customer 3 subscribed to shipment 1
+[REQUEST] GET /api/customer/shipments/5/eta
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM shipments WHERE id = $1 AND customer_id = $2 [ '5', 3 ]
+[DB] Query: SELECT * FROM shipments WHERE id = $1 OR tracking_number = $1 [ '5' ]
+[Socket] Customer 3 subscribed to shipment 2
+[Socket] Customer 3 subscribed to shipment 5
+[Socket] Customer 3 subscribed to shipment 8
+[REQUEST] GET /api/customer/shipments/1/eta
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM shipments WHERE id = $1 AND customer_id = $2 [ '1', 3 ]
+[DB] Query: SELECT * FROM shipments WHERE id = $1 OR tracking_number = $1 [ '1' ]
+[REQUEST] GET /api/customer/shipments/1/eta
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM shipments WHERE id = $1 AND customer_id = $2 [ '1', 3 ]
+[DB] Query: SELECT * FROM shipments WHERE id = $1 OR tracking_number = $1 [ '1' ]
+[REQUEST] GET /api/customer/shipments/5/reliability
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM shipments WHERE id = $1 AND customer_id = $2 [ '5', 3 ]
+[DB] Query: SELECT * FROM shipments WHERE id = $1 OR tracking_number = $1 [ '5' ]
+[REQUEST] GET /api/customer/shipments/5/eta
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM shipments WHERE id = $1 AND customer_id = $2 [ '5', 3 ]
+[DB] Query: SELECT * FROM shipments WHERE id = $1 OR tracking_number = $1 [ '5' ]
+[REQUEST] GET /api/customer/shipments/1/reliability
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM shipments WHERE id = $1 AND customer_id = $2 [ '1', 3 ]
+[DB] Query: SELECT * FROM shipments WHERE id = $1 OR tracking_number = $1 [ '1' ]
+[REQUEST] GET /api/customer/shipments/5/reliability
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM shipments WHERE id = $1 AND customer_id = $2 [ '5', 3 ]
+[DB] Query: SELECT * FROM shipments WHERE id = $1 OR tracking_number = $1 [ '5' ]
+[REQUEST] GET /api/customer/shipments/1/reliability
+[Auth] User verified: customer@example.com Role: customer
+[DB] Query: SELECT * FROM shipments WHERE id = $1 AND customer_id = $2 [ '1', 3 ]
+[DB] Query: SELECT * FROM shipments WHERE id = $1 OR tracking_number = $1 [ '1' ]
+[REQUEST] GET /api/customer/documents/invoice/1
+[Auth] User verified: customer@example.com Role: customer
